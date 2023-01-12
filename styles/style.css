@@ -1,0 +1,171 @@
+/* Josh W Comeau Reset */
+/* from https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #next {
+  isolation: isolate;
+}
+
+/* Site Styling */
+
+:root {
+  --primary-pale: hsl(225, 100%, 94%);
+  --primary-bright: hsl(245, 75%, 52%);
+
+  --neutral-v-pale: hsl(225, 100%, 98%);
+  --neutral-desat: hsl(224, 23%, 55%);
+  --neutral-dark: hsl(223, 47%, 23%);
+
+  --button-hover: hsl(245, 83%, 68%);
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-pale);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-position: top;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+}
+
+.card {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  background-color: #ffffff;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: var(--fw-500);
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: var(--fw-900);
+  padding-block: 10px;
+}
+
+p {
+  color: var(--neutral-desat);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.payment-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  margin-block: 10px;
+  background-color: var(--neutral-v-pale);
+  border-radius: 10px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col h2 {
+  font-size: 0.875rem;
+  font-weight: var(--fw-700);
+  text-align: center;
+}
+
+.flex-col p {
+  font-size: 0.875rem;
+}
+.payment-area a {
+  font-size: 0.875rem;
+}
+.payment-area a:hover {
+  text-decoration: none;
+}
+
+.payment {
+  background-color: var(--primary-bright);
+  color: var(--neutral-v-pale);
+  font-size: 0.875rem;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  padding-block: 10px;
+  font-weight: var(--fw-700);
+  margin-block: 10px;
+  box-shadow: 0 10px 20px var(--neutral-desat);
+}
+
+.cancel {
+  background-color: transparent;
+  border: none;
+  font-weight: var(--fw-700);
+  font-size: 0.75rem;
+  color: var(--neutral-desat);
+  padding: 10px;
+}
+
+.payment:hover, .cancel:hover {
+  cursor: pointer;
+}
+
+.payment:hover {
+  background-color: var(--button-hover);
+}
+
+.cancel:hover {
+  color: var(--neutral-dark);
+}
+
+@media only screen and (min-width: 376px){
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+}
