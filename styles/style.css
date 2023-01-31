@@ -62,16 +62,15 @@ body {
   background-color: var(--primary-pale);
   background-image: url(../images/pattern-background-mobile.svg);
   background-position: top;
-  /* background-size: cover; */
   background-repeat: no-repeat;
 }
 
 .card {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-block: auto;
+  margin-inline: 20px;
   display: flex;
   flex-direction: column;
-  max-width: 280px;
+  max-width: 450px;
   background-color: #ffffff;
   border-radius: 1em;
   overflow: hidden;
@@ -83,57 +82,63 @@ body {
   align-items: center;
   font-family: var(--font-family);
   font-weight: var(--fw-500);
-  padding: 1rem;
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
 }
 
 .title {
   font-size: 1.25rem;
   font-weight: var(--fw-900);
-  padding-block: 10px;
 }
 
 p {
   color: var(--neutral-desat);
-  font-size: 0.875rem;
   text-align: center;
+}
+
+.tagline {
+  padding-block: 1rem;
 }
 
 .payment-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 15px;
+  gap: 5px;
+  padding: 10px;
   margin-block: 10px;
   background-color: var(--neutral-v-pale);
   border-radius: 10px;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-col h2 {
-  font-size: 0.875rem;
-  font-weight: var(--fw-700);
-  text-align: center;
-}
-
-.flex-col p {
-  font-size: 0.875rem;
-}
 .payment-area a {
-  font-size: 0.875rem;
+  font-weight: 700; 
+  margin-left: auto;
 }
 .payment-area a:hover {
   text-decoration: none;
 }
 
+.costs {
+  display: flex;
+  flex-direction: column;
+}
+
+.costs h2 {
+  font-size: 1rem;
+  font-weight: var(--fw-700);
+  text-align: center;
+}
+
+.costs p {
+  font-size: 1rem;
+}
+
 .payment {
   background-color: var(--primary-bright);
   color: var(--neutral-v-pale);
-  font-size: 0.875rem;
+  font-size: 1rem;
   border-radius: 10px;
   width: 100%;
   border: none;
@@ -147,7 +152,7 @@ p {
   background-color: transparent;
   border: none;
   font-weight: var(--fw-700);
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--neutral-desat);
   padding: 10px;
 }
@@ -167,5 +172,11 @@ p {
 @media only screen and (min-width: 376px){
   body {
     background-image: url(../images/pattern-background-desktop.svg);
+  }
+  .content {
+    padding-inline: 2rem;
+  }
+  .payment-area {
+    gap: 10px;
   }
 }
